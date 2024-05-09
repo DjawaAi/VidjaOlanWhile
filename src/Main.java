@@ -3,9 +3,9 @@ public class Main {
 
         System.out.println("Тема ДЗ команда цикла - While");
 
-        byte dZ = 0;
+        byte dZ = 1;
         System.out.println();
-        System.out.println("Задача № " +(dZ += 1));
+        System.out.println("Задача № " +(dZ ++));
         System.out.println();
         int targetedAccumulation = 2_459_000;
         int creditWorthiness = 15_000;
@@ -21,11 +21,11 @@ public class Main {
         }
 
         System.out.println();
-        System.out.println("Задача № " +(dZ += 1));
+        System.out.println("Задача № " +(dZ ++));
         System.out.println();
         int i = 1;
         while (i <= 10) {
-        //for (i = 1; i <= 10; i++) {
+            //for (i = 1; i <= 10; i++) {
             System.out.print(i);
             i += 1;
         }
@@ -36,21 +36,21 @@ public class Main {
 
         System.out.println();
         System.out.println();
-        System.out.println("Задача № " +(dZ += 1));
+        System.out.println("Задача № " +(dZ ++));
         System.out.println();
         int population = 12_000_000;
         int birthRate = 17;
         int mortalityRate = 8;
         int time = 10;
         int partPopulation = 1000;
-do {
-  population += population / partPopulation * (birthRate - mortalityRate);
-  time--;
-    System.out.println("Год " +(10 - time)+ ", численность населения составляет " +population);
-}while (time > 0);
+        do {
+            population += population / partPopulation * (birthRate - mortalityRate);
+            time--;
+            System.out.println("Год " +(10 - time)+ ", численность населения составляет " +population);
+        }while (time > 0);
 
         System.out.println();
-        System.out.println("Задача № " +(dZ += 1));
+        System.out.println("Задача № " +(dZ ++));
         System.out.println();
         float interestRate = 7;
         float initialDeposit = 15000;
@@ -64,7 +64,7 @@ do {
         }
 
         System.out.println();
-        System.out.println("Задача № " +(dZ += 1));
+        System.out.println("Задача № " +(dZ ++));
         System.out.println();
         interestRate = 7;
         initialDeposit = 15000;
@@ -80,7 +80,7 @@ do {
         }
 
         System.out.println();
-        System.out.println("Задача № " +(dZ += 1));
+        System.out.println("Задача № " +(dZ ++));
         System.out.println();
         interestRate = 7;
         initialDeposit = 15000;
@@ -96,7 +96,7 @@ do {
         }
 
         System.out.println();
-        System.out.println("Задача № " +(dZ += 1));
+        System.out.println("Задача № " +(dZ ++));
         System.out.println();
         int friday = 3;
         int daysPerMonth = 31;
@@ -106,18 +106,18 @@ do {
         } while (friday <= daysPerMonth);
 
         System.out.println();
-        System.out.println("Задача № " +(dZ += 1));
+        System.out.println("Задача № " +(dZ ++));
         System.out.println();
-        int yearZero = 2003;
+        int yearZero = 0;
         int period = 79;
-        int observationInterval = 200;
-        int nextAppearance = yearZero + period;;
-        for (int year = yearZero; yearZero - year <= observationInterval; year -= period ) {
-            System.out.println(year + " год появления кометы за последние двести лет");
-        }
-            while (nextAppearance - yearZero <= 100) {
-                System.out.println(nextAppearance+ " год следующего появления кометы");
-                nextAppearance += period;
+        int observationBefore = 200;
+        int observationAfter = 100;
+        for (; yearZero <= 2024 + observationAfter; yearZero += period ) {
+            if (yearZero >= 2024 - observationBefore && yearZero <= 2024) {
+                System.out.println(yearZero+ " год появления кометы за последние двести лет");
+            } else if (yearZero >2024 && yearZero <= 2024 + observationAfter) {
+                System.out.println(yearZero+ " год следующего появления кометы");
+            }
         }
     }
 }
